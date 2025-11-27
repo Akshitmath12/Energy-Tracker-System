@@ -14,7 +14,6 @@ export default async function handler(req, res) {
     return res.status(400).json({ message: "Email and password are required" });
 
   try {
-s
     const existingUser = await prisma.user.findUnique({ where: { email } });
     if (existingUser)
       return res.status(409).json({ message: "User already exists" });

@@ -31,13 +31,14 @@ export default function History() {
           <h1 className="text-3xl font-bold text-green-900">History 📅</h1>
           <div className="flex gap-3">
             <Link href="/EnergyForm">
-              <button className="bg-white text-green-700 px-4 py-2 rounded-xl shadow">
+              <button className="bg-white text-green-700 px-4 py-2 rounded-xl shadow" style={{cursor: "pointer"}}>
                 Back to Log
               </button>
             </Link>
             <button
               onClick={logout}
               className="bg-red-500 text-white px-4 py-2 rounded-xl hover:bg-red-600"
+              style={{cursor: "pointer"}}
             >
               Logout
             </button>
