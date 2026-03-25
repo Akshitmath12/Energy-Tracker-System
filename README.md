@@ -2,16 +2,15 @@ EnergyTracker
 A full-stack wellness tracking application that helps you log, visualise, and improve your daily energy levels using AI-powered insights.
 Built with Next.js, TypeScript, PostgreSQL, Prisma, and OpenAI API.
 
-Screenshots
-📝 Daily Log
+Daily Log
 Log your daily metrics including energy, motivation, stress, sleep, water, caffeine, and exercise.
-Show Image
-📊 Analytics Dashboard
+
+Analytics Dashboard
 Visualise your trends over time with interactive charts for energy, sleep, stress, and more.
-Show Image
-📅 History
+
+History
 View all your past entries in a clean chronological timeline.
-Show Image
+
 
 Features
 
