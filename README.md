@@ -1,36 +1,70 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+EnergyTracker 
+A full-stack wellness tracking application that helps you log, visualise, and improve your daily energy levels using AI-powered insights.
+Built with Next.js, TypeScript, PostgreSQL, Prisma, and OpenAI API.
 
-## Getting Started
+Screenshots
+📝 Daily Log
+Log your daily metrics including energy, motivation, stress, sleep, water, caffeine, and exercise.
+Show Image
+📊 Analytics Dashboard
+Visualise your trends over time with interactive charts for energy, sleep, stress, and more.
+Show Image
+📅 History
+View all your past entries in a clean chronological timeline.
+Show Image
 
-First, run the development server:
+Features
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+🔐 User Authentication — Secure login and logout with session management
+📝 Daily Logging — Track Energy, Motivation, Stress, Sleep, Water, Caffeine, and Exercise
+📊 Analytics Dashboard — Average metrics summary cards + interactive line/bar charts over time
+📅 Entry History — Chronological view of all past entries
+🤖 AI Insights — OpenAI-powered personalised energy management suggestions based on your data
+📱 Responsive UI — Works across desktop and mobile
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Tech Stack
+LayerTechnologyFrontendNext.js 14, TypeScript, React HooksStylingTailwind CSSBackendNext.js API RoutesDatabasePostgreSQL + Prisma ORMAIOpenAI APIAuthJWT / Session-based authentication
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Getting Started
+Prerequisites
 
-## Learn More
+Node.js 18+
+PostgreSQL database
+OpenAI API key
 
-To learn more about Next.js, take a look at the following resources:
+Installation
+bash# Clone the repository
+git clone https://github.com/Akshitmath12/Energy-Tracker-System.git
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+# Navigate into the project
+cd Energy-Tracker-System
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+# Install dependencies
+npm install
+Environment Setup
+Create a .env file in the root directory:
+envDATABASE_URL="postgresql://user:password@localhost:5432/energy_tracker"
+OPENAI_API_KEY="your_openai_api_key"
+NEXTAUTH_SECRET="your_secret_key"
+Database Setup
+bash# Run Prisma migrations
+npx prisma migrate dev
 
-## Deploy on Vercel
+# (Optional) Open Prisma Studio to view your database
+npx prisma studio
+Run the App
+bashnpm run dev
+Open http://localhost:3000 in your browser.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Project Structure
+src/
+├── app/
+│   ├── page.tsx          # Daily log form
+│   ├── analytics/        # Analytics dashboard
+│   ├── history/          # Entry history
+│   └── api/              # REST API routes
+├── components/           # Reusable UI components
+└── lib/                  # Prisma client, utilities
+prisma/
+└── schema.prisma         # Database schema
